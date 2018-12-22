@@ -53,7 +53,7 @@ sourcePage() {
 }
 
 # default url for added Debian backports etc.
-default_mirror='http://deb.debian.org/debian'
+default_mirror='https://deb.debian.org/debian'
 
 # matches most mirrors
 # add (?=.*debian) at beginning to insist on 'debian' somewhere (needs PCRE)
@@ -75,7 +75,7 @@ ${1-}
 ------------------------------------------------" >> "$logfile"
 }
 
-STEPS_BASIC=('apt-update-upgrade' 'system-tweaks' 'install-images-extra' 'install-java-packages' 'add-debian-backports' 'add-bunsen-backports' 'install-flashplugin' 'install-dropbox' 'devel')
+STEPS_BASIC=('apt-update-upgrade' 'system-tweaks' 'install-images-extra' 'install-java-packages' 'add-debian-backports' 'add-bunsen-backports' 'devel')
 STEPS_DEVEL=('devel-install-version-control-tools' 'devel-install-lamp-stack' 'devel-install-packaging-tools')
 
 # prints something like: -------[ page 1 of 10 ]-------
